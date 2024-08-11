@@ -1,0 +1,13 @@
+.kotlin
+.idea
+*.iml
+.gradle
+build/
+*.apk
+*.apks
+*.aab
+local.properties
+Thumbs.db
+/captures/
+/fastlane/report.xml
+/compose-metrics/

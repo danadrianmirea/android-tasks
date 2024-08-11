@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:key="@string/preference_screen">
+
+  <Preference
+    android:key="@string/p_theme"
+    android:title="@string/theme" />
+
+  <Preference
+    android:key="@string/p_theme_color"
+    android:title="@string/color" />
+
+  <Preference
+    android:key="@string/p_theme_accent"
+    android:title="@string/accent" />
+
+  <Preference
+    android:key="@string/p_theme_launcher"
+    android:title="@string/launcher_icon" />
+
+  <SwitchPreferenceCompat
+    android:defaultValue="true"
+    android:key="@string/p_desaturate_colors"
+    android:title="@string/desaturate_colors"
+    android:summaryOn="@string/desaturate_colors_summary_on"
+    android:summaryOff="@string/desaturate_colors_summary_off" />
+
+  <ListPreference
+    android:defaultValue="0"
+    android:key="@string/p_map_theme"
+    android:title="@string/map_theme"
+    android:entries="@array/map_theme_names"
+    android:entryValues="@array/map_theme_values"
+    android:summary="%s" />
+
+  <SwitchPreferenceCompat
+      android:defaultValue="false"
+      android:key="@string/p_markdown"
+      android:summary="@string/markdown_description"
+      android:title="@string/markdown"
+      app:allowDividerAbove="true" />
+
+  <PreferenceCategory
+    android:title="@string/on_launch">
+
+    <SwitchPreferenceCompat
+      android:defaultValue="true"
+      android:key="@string/p_open_last_viewed_list"
+      android:disableDependentsState="true"
+      android:title="@string/open_last_viewed_list" />
+
+    <Preference
+      android:key="@string/p_default_open_filter"
+      android:title="@string/widget_open_list"
+      android:dependency="@string/p_open_last_viewed_list" />
+
+  </PreferenceCategory>
+
+  <PreferenceCategory
+    android:key="@string/settings_localization"
+    android:title="@string/settings_localization">
+
+    <Preference
+      android:key="@string/p_language"
+      android:title="@string/language" />
+
+    <Preference
+      android:key="@string/translations"
+      android:title="@string/translations"
+      app:icon="@drawable/ic_open_in_new_24px" />
+
+  </PreferenceCategory>
+
+</PreferenceScreen>
